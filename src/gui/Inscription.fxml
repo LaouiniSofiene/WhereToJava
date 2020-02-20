@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="837.0" style="-fx-background-color: #E9B000;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.InscriptionController">
+   <children>
+      <StackPane layoutX="35.0" layoutY="35.0" prefHeight="305.0" prefWidth="767.0" style="-fx-background-color: #E24E42;">
+         <children>
+            <GridPane fx:id="etape1" alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXComboBox fx:id="role" focusColor="#e9b000" prefHeight="25.0" prefWidth="350.0" promptText="Type de compte" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="email" focusColor="#e9b000" prefHeight="25.0" prefWidth="350.0" promptText="Adresse E-mail" unFocusColor="WHITE" GridPane.rowIndex="1" />
+                  <JFXPasswordField fx:id="motdp" focusColor="#e9b000" prefHeight="25.0" prefWidth="350.0" promptText="Mot de passe" unFocusColor="WHITE" GridPane.rowIndex="2" />
+                  <JFXPasswordField fx:id="motdp2" focusColor="#e9b000" prefWidth="350.0" promptText="Confirmez le mot de passe" unFocusColor="WHITE" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="etape2">
+              <columnConstraints>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="nom" focusColor="#e9b000" prefHeight="25.0" prefWidth="350.0" promptText="Nom" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="prenom" focusColor="#e9b000" prefHeight="25.0" prefWidth="350.0" promptText="Prénom" unFocusColor="WHITE" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="ville" focusColor="#e9b000" prefHeight="25.0" prefWidth="350.0" promptText="Votre ville" unFocusColor="WHITE" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="telephone" focusColor="#e9b000" prefHeight="25.0" prefWidth="350.0" promptText="Téléphone" unFocusColor="WHITE" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="etape3">
+              <columnConstraints>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="207.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fx:id="photo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton fx:id="btnPhoto" onAction="#handleBtnPhoto" style="-fx-background-color: #008F95;" text="Ajouter une photo de profile" textFill="WHITE" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+      <JFXButton fx:id="btnSuivant" layoutX="664.0" layoutY="352.0" onAction="#handleBtnSuivant" style="-fx-background-color: #008F95;" text="Suivant" textFill="WHITE" />
+      <JFXButton layoutX="744.0" layoutY="352.0" onAction="#handleBtnAnnul" style="-fx-background-color: #008F95;" text="Annuler" textFill="WHITE" />
+      <JFXButton fx:id="btnPrecedent" layoutX="571.0" layoutY="352.0" onAction="#handleBtnPrecedent" style="-fx-background-color: #008F95;" text="Précédent" textFill="WHITE" />
+   </children>
+</AnchorPane>

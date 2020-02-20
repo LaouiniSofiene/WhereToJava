@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="508.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ListeEvenementController">
+   <children>
+      <AnchorPane fx:id="plane" layoutX="-6.0" layoutY="89.0" prefHeight="419.0" prefWidth="656.0" style="-fx-background-color: #304956;">
+         <children>
+            <TableView fx:id="tableEvenement" layoutX="7.0" layoutY="10.0" prefHeight="355.0" prefWidth="656.0" stylesheets="@../css/test.css">
+               <columns>
+                  <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="etab" prefWidth="93.0" text="localisation" />
+                  <TableColumn fx:id="debut" prefWidth="76.0" text="Date Debut" />
+                  <TableColumn fx:id="fin" prefWidth="86.0" text="Date fin" />
+                  <TableColumn fx:id="desc" prefWidth="106.0" text="Description" />
+                  <TableColumn fx:id="theme" prefWidth="85.0" text="Theme" />
+                  <TableColumn fx:id="nbr_place" prefWidth="71.0" text="Nbr places" />
+                  <TableColumn fx:id="prix" prefWidth="61.0" text="Prix" />
+               </columns>
+            </TableView>
+            <Button layoutX="417.0" layoutY="374.0" mnemonicParsing="false" onAction="#SupprimerEvenement" prefHeight="32.0" prefWidth="200.0" stylesheets="@../css/test.css" text="Supprimer Evenement" />
+            <JFXTextField fx:id="txtRecherche" layoutX="14.0" layoutY="375.0" promptText="Rechercher" stylesheets="@../css/test.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="topbar" layoutX="-6.0" prefHeight="75.0" prefWidth="663.0" style="-fx-background-color: #304956;" stylesheets="@../../../../../Admin/src/css/test.css">
+         <children>
+            <ImageView fx:id="Voyage" accessibleRole="BUTTON" layoutX="28.0" layoutY="22.0" onMouseClicked="#handleVoyages" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/airplane-shape.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="enseignes" layoutX="155.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/beer.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exit" layoutX="590.0" layoutY="22.0" onMouseClicked="#handleBtnDeco" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="event" layoutX="312.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fireworks-on-event-day-reminder-calendar-page-of-interface_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="user" layoutX="451.0" layoutY="22.0" onMouseClicked="#handleUsers" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/multiple-users-silhouette.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

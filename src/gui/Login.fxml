@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="837.0" style="-fx-background-color: #E9B000;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginController">
+    <children>
+        <Label fx:id="label" layoutX="204.0" layoutY="269.0" prefHeight="17.0" prefWidth="149.0" />
+      <AnchorPane layoutX="472.0" layoutY="47.0" prefHeight="306.0" prefWidth="306.0" style="-fx-background-color: #E24E42;">
+         <children>
+            <JFXTextField fx:id="textEmail" focusColor="#e9b000" layoutX="36.0" layoutY="95.0" prefHeight="25.0" prefWidth="236.0" promptText="Adresse e-mail" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="textPassword" focusColor="#e9b000" layoutX="35.0" layoutY="141.0" prefHeight="25.0" prefWidth="236.0" promptText="Mot de passe" unFocusColor="WHITE" />
+            <JFXButton fx:id="btnLogin" layoutX="35.0" layoutY="208.0" onAction="#handleBtnLogin" prefHeight="25.0" prefWidth="236.0" style="-fx-background-color: #008F95;" text="Se connecter" textFill="WHITE" />
+            <Label layoutX="117.0" layoutY="31.0" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="261.0" text="Mot de passe oublié?" textFill="WHITE" underline="true" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="36.0" layoutY="117.0" text="Bienvenue dans WhereTo" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="162.0" prefHeight="60.0" prefWidth="393.0" text="L'application intelligente pour rechercher et découvrir de nouveaux lieux qui correspondent à tes gouts, où que tu te trouves dans le monde." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCreer" layoutX="36.0" layoutY="237.0" onAction="#handleBtnCreer" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #008F95;" text="Créer un compte" textFill="WHITE" />
+      <ImageView fitHeight="79.0" fitWidth="142.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/ghaie/Desktop/3A/S2/PI-Dev/Logo/Logos-Blanc.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

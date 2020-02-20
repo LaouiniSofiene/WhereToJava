@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TestFXMLController">
+   <children>
+      <Label layoutX="236.0" layoutY="41.0" prefHeight="17.0" prefWidth="129.0" text="Ajouter voyage" />
+      <Label layoutX="55.0" layoutY="80.0" text="Date_debut" />
+      <Label layoutX="55.0" layoutY="111.0" text="Date_fin" />
+      <Label layoutX="55.0" layoutY="151.0" text="Prix" />
+      <Label layoutX="56.0" layoutY="232.0" text="Description" />
+      <Label layoutX="59.0" layoutY="289.0" text="Image" />
+      <Label layoutX="55.0" layoutY="185.0" text="NB_places" />
+      <DatePicker fx:id="dt_date_debut" layoutX="242.0" layoutY="85.0" />
+      <DatePicker fx:id="dt_date_fin" layoutX="242.0" layoutY="116.0" />
+      <TextArea fx:id="d_desc" layoutX="222.0" layoutY="232.0" prefHeight="47.0" prefWidth="200.0" />
+      <TextField fx:id="n_nb" layoutX="227.0" layoutY="190.0" />
+      <TextField fx:id="p_prix" layoutX="248.0" layoutY="147.0" />
+      <Label layoutX="56.0" layoutY="365.0" text="Destination" />
+      <TextField fx:id="d_dest" layoutX="236.0" layoutY="361.0" />
+      <Button fx:id="Info" layoutX="422.0" layoutY="361.0" mnemonicParsing="false" onAction="#choisir" text="Info" />
+      <Button fx:id="Ajouter" layoutX="487.0" layoutY="361.0" mnemonicParsing="false" onAction="#choix" text="Ajouter" />
+      <Button layoutX="297.0" layoutY="306.0" mnemonicParsing="false" onAction="#image" text="Choisir" />
+   </children>
+</AnchorPane>

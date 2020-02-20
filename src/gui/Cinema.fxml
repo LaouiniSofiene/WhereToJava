@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CinemaController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="837.0">
+         <children>
+            <AnchorPane layoutX="-13.0" layoutY="-10.0" prefHeight="410.0" prefWidth="186.0" style="-fx-background-color: #E24E42;">
+               <children>
+                  <Pane prefHeight="47.0" prefWidth="170.0" style="-fx-background-color: #E24E42;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="13.0" text="WhereTo" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView fill="WHITE" glyphName="MENU" layoutX="136.0" layoutY="31.0" size="20" />
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="acceuil" alignment="BASELINE_LEFT" layoutY="74.0" onAction="#handleBtnAccueil" prefHeight="30.0" prefWidth="170.0" ripplerFill="WHITESMOKE" text="Accueil" textFill="#e6e6e6">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="profil" alignment="BASELINE_LEFT" layoutX="3.0" layoutY="194.0" onAction="#handleBtnProfil" prefHeight="30.0" prefWidth="170.0" ripplerFill="WHITESMOKE" text="Profil" textFill="#e6e6e6">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="enseigne" alignment="BASELINE_LEFT" layoutY="104.0" onAction="#handleBtnEnseigne" prefHeight="30.0" prefWidth="170.0" ripplerFill="WHITESMOKE" text="Enseignes" textFill="#e6e6e6">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="MAP_MARKER" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="evenement" alignment="BASELINE_LEFT" layoutY="134.0" onAction="#handleBtnEvenement" prefHeight="30.0" prefWidth="170.0" ripplerFill="WHITESMOKE" text="Evenements" textFill="#e6e6e6">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CALENDAR_CLOCK" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="voyage" alignment="BASELINE_LEFT" layoutX="3.0" layoutY="164.0" onAction="#handleBtnVoyage" prefHeight="30.0" prefWidth="170.0" ripplerFill="WHITESMOKE" text="Voyages" textFill="#e6e6e6">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="AIRPLANE" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="parametre" alignment="BASELINE_LEFT" layoutY="224.0" onAction="#handleBtnParametre" prefHeight="30.0" prefWidth="170.0" ripplerFill="WHITESMOKE" text="Paramétres" textFill="#e6e6e6">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="SETTINGS" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="14.0" layoutY="58.0" text="Navigation" textFill="#9e9e9e">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="271.0" text="Abonnemnts" textFill="#9e9e9e">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXButton alignment="BASELINE_LEFT" layoutY="286.0" prefHeight="30.0" prefWidth="170.0" ripplerFill="WHITESMOKE" text="Le Parrain" textFill="#e6e6e6">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Logo/Untitled-1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pageProfil" layoutX="173.0" prefHeight="400.0" prefWidth="667.0" style="-fx-background-color: #E9B000;">
+               <children>
+                  <Pane layoutY="-16.0" prefHeight="157.0" prefWidth="667.0" style="-fx-background-color: FFCC2E;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="217.0" layoutY="5.0" prefHeight="400.0" prefWidth="535.0">
+         <children>
+            <Label layoutX="49.0" layoutY="78.0" text="Nos Cinemas" />
+            <TableView fx:id="tbInformation" layoutX="24.0" layoutY="111.0" prefHeight="289.0" prefWidth="461.0">
+               <columns>
+                  <TableColumn fx:id="colNom" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="colDescription" prefWidth="262.0" text="Description" />
+                  <TableColumn fx:id="colImage" prefWidth="123.0" text="Image" />
+               </columns>
+            </TableView>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#accueilbt" prefHeight="37.0" prefWidth="99.0" text="Acceuil">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="126.0" layoutY="14.0" mnemonicParsing="false" onAction="#afficheRestaurant" prefHeight="37.0" prefWidth="107.0" text="Restaurant">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" onAction="#afficheBar" prefHeight="37.0" prefWidth="99.0" text="Bar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="353.0" layoutY="14.0" mnemonicParsing="false" onAction="#afficheCinema" prefHeight="37.0" prefWidth="107.0" text="Cafe">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

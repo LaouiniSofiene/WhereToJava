@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="439.0" style="-fx-background-color: null;" stylesheets="@../css/test.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ChartEnseigneController">
+   <children>
+      <AnchorPane fx:id="plane" layoutY="89.0" prefHeight="419.0" prefWidth="439.0" style="-fx-background-color: #304956;">
+         <children>
+            <BarChart fx:id="barChart" layoutY="2.0" prefHeight="419.0" prefWidth="439.0" title="Nombre d'Enseigne" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="topbar" prefHeight="75.0" prefWidth="439.0" style="-fx-background-color: #304956;" stylesheets="@../css/test.css">
+         <children>
+            <ImageView fx:id="Voyage" accessibleRole="BUTTON" layoutX="30.0" layoutY="22.0" onMouseClicked="#handleVoyage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/airplane-shape.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="enseignes" layoutX="111.0" layoutY="22.0" onMouseClicked="#handleEnseigne" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/beer.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exit" layoutX="372.0" layoutY="22.0" onMouseClicked="#handleBtnDeco" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="event" layoutX="204.0" layoutY="22.0" onMouseClicked="#handleEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fireworks-on-event-day-reminder-calendar-page-of-interface.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="user" layoutX="290.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/multiple-users-silhouette-clicked.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

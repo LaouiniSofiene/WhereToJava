@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="598.0" style="-fx-background-color: null;" stylesheets="@../../../../../Desktop/Admin/src/css/test.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AdminFXMLController">
+   <children>
+      <AnchorPane fx:id="plane" layoutY="72.0" prefHeight="436.0" prefWidth="598.0" style="-fx-background-color: #304956;">
+         <children>
+            <JFXButton layoutX="477.0" layoutY="382.0" onAction="#bloquer" stylesheets="@../css/test.css" text="Bloquer" />
+            <ScrollPane prefHeight="367.0" prefWidth="596.0" style="-fx-background-color: #304956;">
+               <content>
+                  <TableView fx:id="table" prefHeight="365.0" prefWidth="594.0" stylesheets="@../css/test.css">
+                    <columns>
+                      <TableColumn fx:id="debut" prefWidth="75.0" text="Debut" />
+                      <TableColumn fx:id="fin" prefWidth="75.0" text="Fin" />
+                        <TableColumn fx:id="prix" prefWidth="75.0" text="Prix" />
+                        <TableColumn fx:id="destination" prefWidth="100.0" text="Destination" />
+                        <TableColumn fx:id="description" prefWidth="100.0" text="Description" />
+                        <TableColumn fx:id="nb" prefWidth="93.0" text="Nbr  Places" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <JFXTextField fx:id="txtRecherche" focusColor="#1ea436" layoutX="29.0" layoutY="390.0" prefHeight="25.0" prefWidth="284.0" promptText="Recherche" unFocusColor="#fcf8f8" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="topbar" prefHeight="75.0" prefWidth="598.0" style="-fx-background-color: #304956;" stylesheets="@../../../../../Desktop/Admin/src/css/test.css">
+         <children>
+            <ImageView fx:id="Voyage" accessibleRole="BUTTON" layoutX="30.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/airplane-shapeclicked.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="enseignes" layoutX="154.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/beer.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exit" layoutX="520.0" layoutY="22.0" onMouseDragged="#handleBtnDeco" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="event" layoutX="283.0" layoutY="22.0" onMouseClicked="#handleEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fireworks-on-event-day-reminder-calendar-page-of-interface.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="user" layoutX="405.0" layoutY="22.0" onMouseClicked="#handleUsers" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/multiple-users-silhouette.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
